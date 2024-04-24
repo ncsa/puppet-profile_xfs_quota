@@ -1,1 +1,8 @@
---- {}
+---
+
+profile_xfs_quota::enable: true
+profile_xfs_quota::sudo_cfg: |
+  Defaults:telegraf !mail_always
+  Defaults:telegraf !requiretty
+  telegraf ALL = NOPASSWD: NOMAIL: /usr/sbin/xfs_quota *
+profile_xfs_quota::volume_path: ""
