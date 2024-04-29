@@ -11,8 +11,7 @@
 
 ## Description
 
-This puppet profile sets up an xfs quota script to check quota enabled xfs volumes, and automates it via telegraf. 
-
+This puppet profile sets up an xfs quota script to check quota enabled xfs volumes, and automates those checks via telegraf. 
 
 ## Setup
 
@@ -23,9 +22,9 @@ include ::profile_xfs_quota
 
 ## Usage
 
-Define the path of your xfs volume with `profile_xfs_quota::quota_path`
+Define the path of your xfs volume with `profile_xfs_quota::volume_path`
 
-- `profile_xfs_quota::quota_path: "/path/to/xfsmount"`
+- `profile_xfs_quota::volume_path: "/path/to/xfsmount"`
 
 ## Reference
 
@@ -35,8 +34,6 @@ See: [REFERENCE.md](REFERENCE.md)
 
 The quota checks will only work on xfs volumes with quotas enabled.
 
-
 ## Development
-
 
 This Common Puppet Profile is managed by NCSA for internal usage.
